@@ -30,11 +30,20 @@ function divide(inputArr) {
   return result;
 }
 
+function operate(inpOperator, inputArray) {
+  let result = 0;
+  if (inpOperator === '+') result = add(inputArray);
+  if (inpOperator === '-') result = subtract(inputArray);
+  if (inpOperator === '*') result = multiply(inputArray);
+  if (inpOperator === '/') result = divide(inputArray);
+  return result;
+}
+
 let inpArr = [3, 4, 9, 8];
-addn = add(inpArr);
-subtn = subtract(inpArr);
-multn = multiply(inpArr);
-divn = divide(inpArr);
+addn = operate('+', inpArr);
+subtn = operate('-', inpArr);
+multn = operate('*', inpArr);
+divn = operate('/', inpArr);
 console.log({ addn });
 console.log({ subtn });
 console.log({ multn });
