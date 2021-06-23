@@ -22,10 +22,20 @@ function multiply(inputArr) {
   return result;
 }
 
+function divide(inputArr) {
+  let result = inpArr[0];
+  for (let i = 1; i < inputArr.length; i++) {
+    result = result / inputArr[i];
+  }
+  return result;
+}
+
 let inpArr = [3, 4, 9, 8];
 addn = add(inpArr);
 subtn = subtract(inpArr);
 multn = multiply(inpArr);
+divn = divide(inpArr);
 console.log({ addn });
 console.log({ subtn });
 console.log({ multn });
+console.log({ divn });
