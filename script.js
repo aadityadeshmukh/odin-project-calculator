@@ -56,3 +56,8 @@ function onNumberClick() {
   let screen = document.getElementById('screen-content');
   screen.textContent = screen.textContent + button.textContent;
 }
+function onClearAll() {
+  let button = this.document.activeElement;
+  let screen = document.getElementById('screen-content');
+  screen.textContent = '';
+}
