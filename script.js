@@ -48,3 +48,11 @@ console.log({ addn });
 console.log({ subtn });
 console.log({ multn });
 console.log({ divn });
+
+function onNumberClick() {
+  let button = this.document.activeElement;
+  console.log(button.id);
+  console.log(button.textContent);
+  let screen = document.getElementById('screen-content');
+  screen.textContent = screen.textContent + button.textContent;
+}

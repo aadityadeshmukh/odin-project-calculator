@@ -8,23 +8,25 @@
 
 <body>
   <div id="main-container">
-    <div id="result-screen"></div>
+    <div id="result-screen">
+      <p id="screen-content"></p>
+    </div>
     <div id="clr-grid">
       <button id="clr-all-btn">CLEAR</button>
       <button id="clr-one-char-btn">&lt;</button>
     </div>
     <div id="main-grid">
       <div id="num-grid">
-        <button id="one-btn">1</button>
-        <button id="two-btn">2</button>
-        <button id="three-btn">3</button>
-        <button id="four-btn">4</button>
-        <button id="five-btn">5</button>
-        <button id="six-btn">6</button>
-        <button id="seven-btn">7</button>
-        <button id="eight-btn">8</button>
-        <button id="nine-btn">9</button>
-        <button id="zero-btn">0</button>
+        <button id="one-btn"  class="numInput"  onclick="onNumberClick()">1</button>
+        <button id="two-btn" class="numInput" onclick="onNumberClick()">2</button>
+        <button id="three-btn" class="numInput" onclick="onNumberClick()">3</button>
+        <button id="four-btn" class="numInput" onclick="onNumberClick()">4</button>
+        <button id="five-btn" class="numInput" onclick="onNumberClick()">5</button>
+        <button id="six-btn" class="numInput" onclick="onNumberClick()">6</button>
+        <button id="seven-btn" class="numInput" onclick="onNumberClick()">7</button>
+        <button id="eight-btn" class="numInput" onclick="onNumberClick()">8</button>
+        <button id="nine-btn" class="numInput" onclick="onNumberClick()">9</button>
+        <button id="zero-btn" class="numInput" onclick="onNumberClick()">0</button>
       </div>
       <div id="operator-grid">
         <button id="one-btn">=</button>
