@@ -61,3 +61,8 @@ function onClearAll() {
   let screen = document.getElementById('screen-content');
   screen.textContent = '';
 }
+function onBackspace() {
+  let button = this.document.activeElement;
+  let screen = document.getElementById('screen-content');
+  screen.textContent = screen.textContent.slice(0, -1);
+}
