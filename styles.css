@@ -13,13 +13,16 @@
 #clr-grid {
   width: 100%;
   height: 10%;
-  border: 1px solid black;
   margin: 2px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 16px;
+  justify-content: center;
 }
 #main-grid {
   width: 100%;
   height: 60%;
-  border: 1px solid black;
   margin: 2px;
   display: grid;
   grid:
@@ -31,7 +34,6 @@
   width: 80%;
   height: 80%;
   margin: 10px;
-  border: 1px solid black;
   grid-area: num-grid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -42,7 +44,11 @@
 #operator-grid {
   width: 20%;
   height: 80%;
-  margin: 20px;
-  border: 1px solid black;
+  margin: 10px;
   grid-area: operator-grid;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-gap: 16px;
+  justify-content: center;
 }
