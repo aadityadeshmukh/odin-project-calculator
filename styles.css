@@ -33,6 +33,11 @@
   margin: 10px;
   border: 1px solid black;
   grid-area: num-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-gap: 16px;
+  justify-content: center;
 }
 #operator-grid {
   width: 20%;
