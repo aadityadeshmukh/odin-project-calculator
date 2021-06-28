@@ -75,3 +75,12 @@ function onOperatorClick() {
     screen.textContent = screen.textContent + button.textContent;
   }
 }
+function operateExpression() {
+  let button = this.document.activeElement;
+  let screen = document.getElementById('screen-content');
+  let expressionStr = screen.textContent;
+  let numberArr = expressionStr.split(/[+]+|[-]+|[x]+|[/]+/);
+  let operatorArr = expressionStr.split(/[0-9]+|[0-9]+|[0-9]+|[0-9]+/);
+  console.table({ numberArr });
+  console.table({ operatorArr });
+}
