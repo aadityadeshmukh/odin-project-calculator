@@ -7,7 +7,7 @@ function add(inputArr) {
 }
 
 function subtract(inputArr) {
-  let result = inpArr[0];
+  let result = inputArr[0];
   for (let i = 1; i < inputArr.length; i++) {
     result = result - inputArr[i];
   }
@@ -23,7 +23,7 @@ function multiply(inputArr) {
 }
 
 function divide(inputArr) {
-  let result = inpArr[0];
+  let result = inputArr[0];
   for (let i = 1; i < inputArr.length; i++) {
     result = result / inputArr[i];
   }
@@ -79,8 +79,13 @@ function operateExpression() {
   let button = this.document.activeElement;
   let screen = document.getElementById('screen-content');
   let expressionStr = screen.textContent;
-  let numberArr = expressionStr.split(/[+]+|[-]+|[x]+|[/]+/);
+  let numberArr = expressionStr.split(/[+]+|[-]+|[*]+|[/]+/);
   let operatorArr = expressionStr.split(/[0-9]+|[0-9]+|[0-9]+|[0-9]+/);
   console.table({ numberArr });
   console.table({ operatorArr });
+  let result = +numberArr[0];
+  for (let i = 1; i < numberArr.length; i++) {
+    result = operate(operatorArr[i], [result, +numberArr[i]]);
+  }
+  screen.textContent = result;
 }
