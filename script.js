@@ -81,6 +81,7 @@ function operateExpression() {
   let expressionStr = screen.textContent;
   let numberArr = expressionStr.split(/[+]+|[-]+|[*]+|[/]+/);
   let operatorArr = expressionStr.split(/[0-9]+|[0-9]+|[0-9]+|[0-9]+/);
+  operatorArr = operatorArr.filter(ch => ch !== '');
   operatorArr = operatorArr.filter(ch => ch !== '.');
   console.table({ numberArr });
   console.table({ operatorArr });
