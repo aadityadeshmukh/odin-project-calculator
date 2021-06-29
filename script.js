@@ -91,3 +91,26 @@ function operateExpression() {
   }
   screen.textContent = result;
 }
+
+function onConvertBtnClick() {
+  let button = this.document.activeElement;
+  let screen = document.getElementById('screen-content');
+  let expressionStr = screen.textContent;
+  let idOperator = expressionStr.indexOf();
+  let numberArr = expressionStr.split(/[+]+|[-]+|[*]+|[/]+/);
+  console.table(numberArr);
+  let lastIndex = expressionStr.lastIndexOf(numberArr[numberArr.length - 1]);
+  console.log(lastIndex);
+  let baseString = expressionStr.slice(0, lastIndex);
+  //decide the operator to be added
+  let lastNumInExpression = numberArr[numberArr.length - 1];
+  idOperatorInString = lastNumInExpression.indexOf('-');
+  if (idOperatorInString === -1) {
+    //no negation
+    lastNumInExpression = '-' + lastNumInExpression;
+  } else {
+    lastNumInExpression = lastNumInExpression.replace('-', '');
+  }
+
+  screen.textContent = baseString + lastNumInExpression;
+}
