@@ -87,7 +87,7 @@ function operateExpression() {
   console.table({ operatorArr });
   let result = +numberArr[0];
   for (let i = 1; i < numberArr.length; i++) {
-    result = operate(operatorArr[i], [result, +numberArr[i]]);
+    result = operate(operatorArr[i - 1], [result, +numberArr[i]]);
   }
   screen.textContent = result;
 }
