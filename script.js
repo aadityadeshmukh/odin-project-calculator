@@ -82,10 +82,6 @@ function operateExpression() {
   let numberArr = expressionStr.split(/[+]+|[-]+|[*]+|[/]+/);
   let operatorArr = expressionStr.split(/[0-9]+|[0-9]+|[0-9]+|[0-9]+/);
   operatorArr = operatorArr.filter(ch => ch !== '.');
-  // let iDotOperators = operatorArr
-  //   .map((ch, i) => (ch === '.' ? i : -1))
-  //   .filter(index => index !== -1);
-  // console.table({ iDotOperators });
   console.table({ numberArr });
   console.table({ operatorArr });
   let result = +numberArr[0];
