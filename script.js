@@ -55,16 +55,21 @@ function onNumberClick() {
   console.log(button.textContent);
   let screen = document.getElementById('screen-content');
   screen.textContent = screen.textContent + button.textContent;
+  button.classList.add('button-hit');
 }
-function onClearAll() {
+function onClearAll(fromKB = false) {
   let button = this.document.activeElement;
+  if (fromKB === true) button = document.getElementById('clr-all-btn');
   let screen = document.getElementById('screen-content');
   screen.textContent = '';
+  button.classList.add('button-hit');
 }
-function onBackspace() {
+function onBackspace(fromKB = false) {
   let button = this.document.activeElement;
+  if (fromKB === true) button = document.getElementById('clr-one-char-btn');
   let screen = document.getElementById('screen-content');
   screen.textContent = screen.textContent.slice(0, -1);
+  button.classList.add('button-hit');
 }
 function onOperatorClick() {
   let button = this.document.activeElement;
@@ -75,8 +80,10 @@ function onOperatorClick() {
     screen.textContent = screen.textContent + button.textContent;
   }
 }
-function operateExpression() {
+function operateExpression(fromKB = false) {
   let button = this.document.activeElement;
+  if (fromKB === true) button = document.getElementById('equal-btn');
+  button.classList.add('button-hit');
   let screen = document.getElementById('screen-content');
   let expressionStr = screen.textContent;
   let numberArr = expressionStr.split(/[+]+|[-]+|[*]+|[/]+/);
@@ -119,9 +126,9 @@ function onConvertBtnClick() {
 document.addEventListener('keydown', function(e) {
   console.log(e.key);
   console.log(e.code);
-  if (e.key === 'Delete') onClearAll();
-  if (e.key === '=') operateExpression();
-  if (e.key === 'Backspace') onBackspace();
+  if (e.key === 'Delete') onClearAll(true);
+  if (e.key === '=') operateExpression(true);
+  if (e.key === 'Backspace') onBackspace(true);
   if (
     (e.keyCode >= 48 && e.keyCode <= 57) ||
     e.key === '.' ||
@@ -133,7 +140,10 @@ document.addEventListener('keydown', function(e) {
     let screen = document.getElementById('screen-content');
     screen.textContent = screen.textContent + e.key;
     //add a nudge to the button
-    let btnClass = '.' + e.key;
+    let btnClass = '';
+    if (e.code === 'Equal' && e.shiftKey) btnClass = '.' + 'add';
+    else if (e.code === 'Digit8' && e.shiftKey) btnClass = '.' + 'multiply';
+    else btnClass = '.' + e.code;
     let button = document.querySelector(btnClass);
     if (!button) return;
 
