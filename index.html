@@ -7,38 +7,41 @@
 </head>
 
 <body>
-  <div id="main-container">
-    <div id="result-screen">
-      <p id="screen-content"></p>
-    </div>
-    <div id="clr-grid">
-      <button id="clr-all-btn" class="key" onClick="onClearAll()">CLEAR</button>
-      <button id="clr-one-char-btn" class="key" onClick="onBackspace()">&lt;</button>
-    </div>
-    <div id="main-grid">
-      <div id="num-grid">
-        <button id="one-btn"  class="numInput Digit1 key"  onclick="onNumberClick()">1</button>
-        <button id="two-btn" class="numInput Digit2 key" onclick="onNumberClick()">2</button>
-        <button id="three-btn" class="numInput Digit3 key" onclick="onNumberClick()">3</button>
-        <button id="four-btn" class="numInput Digit4 key" onclick="onNumberClick()">4</button>
-        <button id="five-btn" class="numInput Digit5 key" onclick="onNumberClick()">5</button>
-        <button id="six-btn" class="numInput Digit6 key" onclick="onNumberClick()">6</button>
-        <button id="seven-btn" class="numInput Digit7 key" onclick="onNumberClick()">7</button>
-        <button id="eight-btn" class="numInput Digit8 key" onclick="onNumberClick()">8</button>
-        <button id="nine-btn" class="numInput Digit9 key" onclick="onNumberClick()">9</button>
-        <button id="zero-btn" class="numInput Digit0 key" onclick="onNumberClick()">0</button>
-        <button id="dot-btn" class="numInput Period key" onclick="onNumberClick()">.</button>
-        <!-- <button id="plus-minus-btn" onclick="onConvertBtnClick()">+/-</button> -->
+  <section class="myGrid">
+    <div class="main-container">
+      <div id="result-screen">
+        <p id="screen-content"></p>
       </div>
-      <div id="operator-grid">
-        <button id="equal-btn" class="Equal key" onClick="operateExpression()">=</button>
-        <button id="divide-btn" class="Slash key" onClick="onOperatorClick()">/</button>
-        <button id="multiply-btn" class="multiply key"onClick="onOperatorClick()">*</button>
-        <button id="subtract-btn" class="Minus key" onClick="onOperatorClick()">-</button>
-        <button id="add-btn" class="add key" onClick="onOperatorClick()">+</button>
+      <div id="clr-grid">
+        <button id="clr-all-btn" class="key" onClick="onClearAll()">CLEAR</button>
+        <button id="clr-one-char-btn" class="key" onClick="onBackspace()">&lt;</button>
+      </div>
+      <div id="main-grid">
+        <div id="num-grid">
+          <button id="one-btn"  class="numInput Digit1 key"  onclick="onNumberClick()">1</button>
+          <button id="two-btn" class="numInput Digit2 key" onclick="onNumberClick()">2</button>
+          <button id="three-btn" class="numInput Digit3 key" onclick="onNumberClick()">3</button>
+          <button id="four-btn" class="numInput Digit4 key" onclick="onNumberClick()">4</button>
+          <button id="five-btn" class="numInput Digit5 key" onclick="onNumberClick()">5</button>
+          <button id="six-btn" class="numInput Digit6 key" onclick="onNumberClick()">6</button>
+          <button id="seven-btn" class="numInput Digit7 key" onclick="onNumberClick()">7</button>
+          <button id="eight-btn" class="numInput Digit8 key" onclick="onNumberClick()">8</button>
+          <button id="nine-btn" class="numInput Digit9 key" onclick="onNumberClick()">9</button>
+          <button id="zero-btn" class="numInput Digit0 key" onclick="onNumberClick()">0</button>
+          <button id="dot-btn" class="numInput Period key" onclick="onNumberClick()">.</button>
+          <!-- <button id="plus-minus-btn" onclick="onConvertBtnClick()">+/-</button> -->
+        </div>
+        <div id="operator-grid">
+          <button id="equal-btn" class="Equal key" onClick="operateExpression()">=</button>
+          <button id="divide-btn" class="Slash key" onClick="onOperatorClick()">/</button>
+          <button id="multiply-btn" class="multiply key"onClick="onOperatorClick()">*</button>
+          <button id="subtract-btn" class="Minus key" onClick="onOperatorClick()">-</button>
+          <button id="add-btn" class="add key" onClick="onOperatorClick()">+</button>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
 </body>
 
 </html>
