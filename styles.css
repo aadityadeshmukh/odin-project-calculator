@@ -1,4 +1,4 @@
-.myGrid {
+.parentGrid {
   width: 100%;
   height: 100%;
   display: grid;
@@ -13,21 +13,26 @@
   grid-area: mainGrid;
   border: 1px solid black;
   padding: 20px;
-}
 
-/* #main-container {
-  width: 40%;
-  height: 80%;
-  border: 1px solid black;
-  padding: 20px;
-} */
-#result-screen {
+  display: grid;
+  grid:
+    'screen' 0.5fr
+    'clrBtns' 0.5fr
+    'numPad' 1fr
+    / 100%;
+  grid-gap: 4px;
+  justify-content: center;
+  align-content: center;
+}
+.screen {
+  grid-area: screen;
   width: 100%;
   height: 30%;
   border: 1px solid black;
   margin: 2px;
 }
-#clr-grid {
+.clrBtns {
+  grid-area: clrBtns;
   width: 100%;
   height: 10%;
   margin: 2px;
@@ -37,7 +42,8 @@
   grid-gap: 16px;
   justify-content: center;
 }
-#main-grid {
+.numPad {
+  grid-area: numPad;
   width: 100%;
   height: 60%;
   margin: 2px;
@@ -47,6 +53,38 @@
     / 80% 20fr;
   grid-gap: 16px;
 }
+/* #main-container {
+  width: 40%;
+  height: 80%;
+  border: 1px solid black;
+  padding: 20px;
+} */
+/* #result-screen {
+  width: 100%;
+  height: 30%;
+  border: 1px solid black;
+  margin: 2px;
+} */
+/* #clr-grid {
+  width: 100%;
+  height: 10%;
+  margin: 2px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 16px;
+  justify-content: center;
+} */
+/* #main-grid {
+  width: 100%;
+  height: 60%;
+  margin: 2px;
+  display: grid;
+  grid:
+    'num-grid operator-grid' 100%
+    / 80% 20fr;
+  grid-gap: 16px;
+} */
 #num-grid {
   width: 80%;
   height: 80%;

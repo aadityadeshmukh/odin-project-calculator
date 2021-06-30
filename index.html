@@ -7,16 +7,16 @@
 </head>
 
 <body>
-  <section class="myGrid">
+  <section class="parentGrid">
     <div class="main-container">
-      <div id="result-screen">
+      <div id="result-screen" class="screen">
         <p id="screen-content"></p>
       </div>
-      <div id="clr-grid">
+      <div id="clr-grid" class="clrBtns">
         <button id="clr-all-btn" class="key" onClick="onClearAll()">CLEAR</button>
         <button id="clr-one-char-btn" class="key" onClick="onBackspace()">&lt;</button>
       </div>
-      <div id="main-grid">
+      <div id="main-grid" class="numPad">
         <div id="num-grid">
           <button id="one-btn"  class="numInput Digit1 key"  onclick="onNumberClick()">1</button>
           <button id="two-btn" class="numInput Digit2 key" onclick="onNumberClick()">2</button>
