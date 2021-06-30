@@ -114,3 +114,23 @@ function onConvertBtnClick() {
 
   screen.textContent = baseString + lastNumInExpression;
 }
+
+//implement keyboard events
+document.addEventListener('keydown', function(e) {
+  console.log(e.key);
+  console.log(e.code);
+  if (e.key === 'Delete') onClearAll();
+  if (e.key === '=') operateExpression();
+  if (e.key === 'Backspace') onBackspace();
+  if (
+    (e.keyCode >= 48 && e.keyCode <= 57) ||
+    e.key === '.' ||
+    e.key === '+' ||
+    e.key === '-' ||
+    e.key === '/' ||
+    e.key === '*'
+  ) {
+    let screen = document.getElementById('screen-content');
+    screen.textContent = screen.textContent + e.key;
+  }
+});
