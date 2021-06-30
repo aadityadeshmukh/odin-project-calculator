@@ -148,5 +148,15 @@ document.addEventListener('keydown', function(e) {
     if (!button) return;
 
     button.classList.add('button-hit');
+    button.addEventListener('transitionend', removeTransition);
   }
 });
+
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+  console.log('Imma getting hit');
+  e.target.classList.remove('button-hit');
+}
+
+let keys = Array.from(document.querySelectorAll('.key'));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
