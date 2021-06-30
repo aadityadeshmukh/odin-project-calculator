@@ -132,5 +132,6 @@ document.addEventListener('keydown', function(e) {
   ) {
     let screen = document.getElementById('screen-content');
     screen.textContent = screen.textContent + e.key;
+    //add a nudge to the button
   }
 });
