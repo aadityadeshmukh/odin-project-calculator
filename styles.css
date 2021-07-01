@@ -112,9 +112,9 @@ body {
   grid-gap: 16px;
 } */
 #num-grid {
-  width: 80%;
-  height: 80%;
-  margin: 10px;
+  /* width: 80%;
+  height: 80%; */
+  /* margin: 10px; */
   grid-area: num-grid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -123,9 +123,9 @@ body {
   justify-content: center;
 }
 #operator-grid {
-  width: 20%;
-  height: 80%;
-  margin: 10px;
+  /* width: 20%;
+  height: 80%; */
+  /* margin: 10px; */
   grid-area: operator-grid;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
