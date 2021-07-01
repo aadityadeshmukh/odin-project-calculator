@@ -30,14 +30,14 @@
           <button id="nine-btn" class="numInput Digit9 key" onclick="onNumberClick()">9</button>
           <button id="zero-btn" class="numInput Digit0 key" onclick="onNumberClick()">0</button>
           <button id="dot-btn" class="numInput Period key" onclick="onNumberClick()">.</button>
+          <button id="equal-btn" class="numInput Equal key" onClick="operateExpression()">=</button>
           <!-- <button id="plus-minus-btn" onclick="onConvertBtnClick()">+/-</button> -->
         </div>
         <div id="operator-grid">
-          <button id="equal-btn" class="Equal key" onClick="operateExpression()">=</button>
-          <button id="divide-btn" class="Slash key" onClick="onOperatorClick()">/</button>
-          <button id="multiply-btn" class="multiply key"onClick="onOperatorClick()">*</button>
-          <button id="subtract-btn" class="Minus key" onClick="onOperatorClick()">-</button>
-          <button id="add-btn" class="add key" onClick="onOperatorClick()">+</button>
+          <button id="divide-btn" class="Slash key opKeys" onClick="onOperatorClick()">/</button>
+          <button id="multiply-btn" class="multiply key opKeys"onClick="onOperatorClick()">*</button>
+          <button id="subtract-btn" class="Minus key opKeys" onClick="onOperatorClick()">-</button>
+          <button id="add-btn" class="add key opKeys" onClick="onOperatorClick()">+</button>
         </div>
       </div>
     </div>
