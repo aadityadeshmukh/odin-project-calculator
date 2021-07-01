@@ -188,4 +188,23 @@ button {
     justify-content: center;
     align-content: center;
   }
+  .numInput,
+  .opKeys {
+    width: 90px;
+    height: 90px;
+    font-size: 30px;
+  }
+  .clrKeys {
+    font-size: 40px;
+  }
+  #screen-content {
+    max-width: 100%;
+    font-size: 40px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+.opKeys {
+  color: black;
 }
