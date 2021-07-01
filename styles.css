@@ -198,7 +198,7 @@ button {
     font-size: 40px;
   }
   #screen-content {
-    max-width: 100%;
+    max-width: inherit;
     font-size: 40px;
     overflow-wrap: break-word;
     word-wrap: break-word;
