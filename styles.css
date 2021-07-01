@@ -147,4 +147,7 @@ button {
 .opKeys {
   width: 55px;
   height: 55px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 }
