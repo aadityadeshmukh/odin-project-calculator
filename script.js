@@ -75,6 +75,7 @@ function onOperatorClick() {
   let button = this.document.activeElement;
   console.log(button.id);
   console.log(button.textContent);
+  operateExpression();
   if (!(button.id === 'equal-btn' || button.id === 'plus-minus-btn')) {
     let screen = document.getElementById('screen-content');
     screen.textContent = screen.textContent + button.textContent;
