@@ -140,8 +140,6 @@ button {
 }
 .button-hit {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
 }
 .numInput,
 .opKeys {
@@ -152,6 +150,15 @@ button {
   font-weight: 500;
 
   background: rgba(65, 117, 5, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.clrKeys {
+  background: rgba(208, 2, 27, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
