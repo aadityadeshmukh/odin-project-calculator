@@ -1,5 +1,9 @@
 body {
-  background-image: url('stacked-waves-haikei.png');
+  background-image: url('https://raw.githubusercontent.com/aadityadeshmukh/odin-project-calculator/master/stacked-waves-haikei.png');
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .parentGrid {
   width: 100%;
