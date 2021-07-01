@@ -203,6 +203,13 @@ button {
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
+  body {
+    background-image: url('https://raw.githubusercontent.com/aadityadeshmukh/odin-project-calculator/8b1b46aa354cdd892a18b1ee0cfb91801c43d041/blob-scene-haikei-mobile.svg');
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .opKeys {
