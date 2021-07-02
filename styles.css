@@ -40,7 +40,6 @@ body {
 .screen {
   grid-area: screen;
   margin: 2px;
-  /* border-radius: 5px; */
   font-size: 24px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: right;
@@ -63,8 +62,6 @@ body {
 }
 .clrBtns {
   grid-area: clrBtns;
-  /* width: 100%;
-  height: 10%; */
   margin: 2px;
   margin-top: 10px;
   display: grid;
@@ -75,15 +72,12 @@ body {
 }
 .numPad {
   grid-area: numPad;
-  /* width: 100%;
-  height: 60%; */
   margin: 2px;
   margin-top: 10px;
   display: grid;
   grid:
     'num-grid operator-grid' 100%
     / 80% 20fr;
-  /* grid-gap: 16px; */
 }
 /* #main-container {
   width: 40%;
